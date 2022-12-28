@@ -43,7 +43,9 @@
 			</ul>
 		</li>
 		<li>
-			<label>레시피</label>
+			<a href="../zibbab/reci.do?kind=all">
+				<label>레시피</label>
+			</a>
 			<ul>
 				<li>
 					<a href="../zibbab/reci.do?kind=all">
@@ -83,12 +85,13 @@
 			</a>
 			<ul>
 				<li>
-					<a href="../zibbab/notice.do">공지사항</a></li>
+					<a href="../zibbab/notice.do">공지사항</a>
+				</li>
 				<li>
 					<a href="../zibbab/questlist.do">문의사항</a>
 				</li>
 				<li>
-					오시는길
+					<a href="../zibbab/come.do">오시는길</a>
 				</li>
 			</ul>
 		</li>
