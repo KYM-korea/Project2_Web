@@ -68,7 +68,7 @@
 				</div>
 				<div style="float:right; align-content: right;">
 					<a href="../zibbab/menu.do"><img src="../Image/menu.png"/></a>
-					<a href=""><img src="../Image/recipe.png"/></a><br />
+					<a href="../zibbab/reci.do?kind=all"><img src="../Image/recipe.png"/></a><br />
 					<a href="../zibbab/consul.do"><img src="../Image/partner.png"/></a>
 					<a href="../zibbab/notice.do"><img src="../Image/account.png"/></a>
 				</div>
