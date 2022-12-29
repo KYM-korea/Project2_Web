@@ -11,11 +11,11 @@
 		Copyright ⓒ 2022 김밥천국 All rights reserved
 	<ul class="nav">
 		<li class="nav-item">
-			<button type="button" class="btn btn-primary"
+			<button type="button" class="btn btn-outline-primary"
 			data-bs-toggle="modal" data-bs-target="#TOSM">이용약관</button>
 		</li>
 		<li class="nav-item">
-			<button type="button" class="btn btn-primary"
+			<button type="button" class="btn btn-outline-primary"
 			data-bs-toggle="modal" data-bs-target="#PPM">개인정보처리 방침</button>
 		</li>
 	</ul>

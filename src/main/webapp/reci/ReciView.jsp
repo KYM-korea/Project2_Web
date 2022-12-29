@@ -56,45 +56,47 @@ textarea{
 					</tr>
 				</table>
 				<br /><br />
-				<c:choose>
-					<c:when test="${likeChk eq 0 }">
-						<button type="button" class="btn btn-outline-primary" onclick="location.href='../zibbab/likeChk.do?mode=good&idx=${dto.idx}';">좋아요</button>
-					</c:when>
-					<c:otherwise>
-						<button type="button" class="btn btn-outline-primary" onclick="location.href='../zibbab/likeChk.do?mode=cancle&idx=${dto.idx}';">좋아요취소</button>
-					</c:otherwise>
-				</c:choose>				
+				<c:if test="${UserId ne 'admin' }">
+					<c:choose>
+						<c:when test="${likeChk eq 0 }">
+							<button type="button" class="btn btn-outline-primary" onclick="location.href='../zibbab/likeChk.do?mode=good&idx=${dto.idx}';">좋아요</button>
+						</c:when>
+						<c:otherwise>
+							<button type="button" class="btn btn-outline-primary" onclick="location.href='../zibbab/likeChk.do?mode=cancle&idx=${dto.idx}';">좋아요취소</button>
+						</c:otherwise>
+					</c:choose>		
+				</c:if>		
 				<br /><br />
+				<form action="../zibbab/comment.do" method="post" onsubmit="return commentChk(this);">
+					<input type="hidden" name="id" value="${sessionScope.UserId }" />
+					<input type="hidden" name="reciIndex" value="${dto.idx }" />
+					<table class="table table-striped">
+						<tr>
+							<td>
+								<input type="text" style="height: 100px; width: 750px;"
+		                        class="form-control" placeholder="음식을 해먹어보고 댓글을 남겨주세요."
+		                        name="rcomment">
+							</td>
+							<td>
+								<button class="btn btn-secondary m-4">등록</button>
+							</td>
+						</tr>
+					</table>
+				</form>
 				<c:if test="${not empty commentBoardLists }">
-					<table>
+					<table class="table table-striped">
 						<c:forEach items="${commentBoardLists }" var="row" varStatus="loop">
 							<tr>
 								<td>${row.id }</td>	
-								<td>${row.postdate }</td>	
-							</tr>
-							<tr>
-								<td colspan="2">
+								<td>
 									${row.rcomment }
 								</td>								
+								<td>${row.postdate }</td>	
 							</tr>
 						</c:forEach>
 					</table>
 				</c:if>
 				
-				<form action="../zibbab/comment.do" method="post" onsubmit="return commentChk(this);">
-					<input type="hidden" name="id" value="${sessionScope.UserId }" />
-					<input type="hidden" name="reciIndex" value="${dto.idx }" />
-					<table>
-						<tr>
-							<td>
-								<textarea name="rcomment" cols="65"></textarea>
-							</td>
-							<td>
-								<button class="btn btn-primary">등록</button>
-							</td>
-						</tr>
-					</table>
-				</form>
 				
 				<button type="button" class="btn btn-outline-primary" onclick="location.href='../zibbab/reci.do?kind=${dto.kind}'">목록보기</button>
 			</div>
