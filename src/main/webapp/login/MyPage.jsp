@@ -10,6 +10,11 @@
 <title>집밥 천국 - 회원 가입</title>
 <script>
 	function checkForm(fn){
+		if(fn.PrevUserPass.value==''){
+			alert('기존 비밀번호를 입력해주세요.');
+			fn.PrevUserPass.focus();
+			return false;
+		}
 		if(fn.pwdChkResult.value=='false'){
 			alert('비밀번호가 일치하지 않습니다.');
 			fn.UserPass.focus();
