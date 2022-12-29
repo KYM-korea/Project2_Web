@@ -56,6 +56,7 @@ textarea{
 					</tr>
 				</table>
 				<br /><br />
+				<!-- 좋아요 부분 -->
 				<c:if test="${UserId ne 'admin' }">
 					<c:choose>
 						<c:when test="${likeChk eq 0 }">
@@ -67,6 +68,7 @@ textarea{
 					</c:choose>		
 				</c:if>		
 				<br /><br />
+				<!-- 댓글 부분 -->
 				<form action="../zibbab/comment.do" method="post" onsubmit="return commentChk(this);">
 					<input type="hidden" name="id" value="${sessionScope.UserId }" />
 					<input type="hidden" name="reciIndex" value="${dto.idx }" />
