@@ -56,7 +56,15 @@ textarea{
 					</tr>
 				</table>
 				<br /><br />
-				
+				<c:choose>
+					<c:when test="${likeChk eq 0 }">
+						<button type="button" class="btn btn-outline-primary" onclick="location.href='../zibbab/likeChk.do?mode=good&idx=${dto.idx}';">좋아요</button>
+					</c:when>
+					<c:otherwise>
+						<button type="button" class="btn btn-outline-primary" onclick="location.href='../zibbab/likeChk.do?mode=cancle&idx=${dto.idx}';">좋아요취소</button>
+					</c:otherwise>
+				</c:choose>				
+				<br /><br />
 				<c:if test="${not empty commentBoardLists }">
 					<table>
 						<c:forEach items="${commentBoardLists }" var="row" varStatus="loop">

@@ -28,6 +28,7 @@ public class ReciListController extends HttpServlet{
 		map.put("kind", kind);
 		
 		List<reciBoardDTO> rBoardLists = dao.selectListRECI(map);
+		
 		dao.close();
 		
 		req.setAttribute("rBoardLists", rBoardLists);

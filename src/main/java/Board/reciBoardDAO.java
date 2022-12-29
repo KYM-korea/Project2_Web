@@ -97,4 +97,40 @@ public class reciBoardDAO extends JDBConnect{
 		
 		return dto;
 	}
+
+	//좋아요 증가
+	public void updatePlusGc(String idx) {
+		String query = "UPDATE reciboard SET gc = gc + 1 WHERE idx=?";
+		
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, idx);
+			psmt.execute();
+		}catch (Exception e) {
+		}
+	}
+	
+	//좋아요 감소
+	public void updateMinuGc(String idx) {
+		String query = "UPDATE reciboard SET gc = gc - 1 WHERE idx=?";
+		
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, idx);
+			psmt.execute();
+		}catch (Exception e) {
+		}
+	}
+	
+	//조회수 증가
+	public void updatePlusVc(String idx) {
+		String query = "UPDATE reciboard SET visitcount = visitcount + 1 WHERE idx=?";
+		
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, idx);
+			psmt.execute();
+		}catch (Exception e) {
+		}
+	}
 }

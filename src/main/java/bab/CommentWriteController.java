@@ -13,7 +13,7 @@ import Board.commentDTO;
 import util.JSFunction;
 
 @WebServlet("/zibbab/comment.do")
-public class commentWriteController extends HttpServlet{
+public class CommentWriteController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		commentDTO dto = new commentDTO();
