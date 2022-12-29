@@ -25,7 +25,8 @@
 						    <h4 class="card-title">${row.title }</h4>
 						</div>
 						작성일 : ${row.postdate } <br />
-						조회수 : ${row.visitcount }
+						조회수 : ${row.visitcount } <br />
+						추천수 : ${row.gc }
 					</a>
 				</div>
 			</c:forEach>

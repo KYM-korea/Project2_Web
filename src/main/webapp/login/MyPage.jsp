@@ -49,7 +49,7 @@
 			}
 		}else{
 			pwdchk.innerHTML = "";
-			frm.pwdChkResult.value = "true";
+			frm.pwdChkResult.value = "false";
 		}
 	}
 </script>
